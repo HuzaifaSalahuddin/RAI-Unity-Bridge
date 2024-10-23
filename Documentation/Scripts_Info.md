@@ -3,7 +3,14 @@
 __Flatten.cs__ 
 
 Converts the heirarchy structure that looks something like this 
-basket_01 ├─ Collisions │ └─ unnamed │ └─ Box ├─ Visuals │ └─ Visuals │ └─ basket_01 │ └─ basket_01_0
+basket_01
+ |-Collisions
+  |--unnamed
+   |---Box
+ |-Visuals
+  |--Visuals
+   |---basket_01
+    |----basket_01_0
     
     OR 
 
