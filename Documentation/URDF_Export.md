@@ -3,7 +3,7 @@
 ## Basic Scene Annotation
 - Follow the basic urdf import steps from "Unity_BotSimulations" to import a robot from URDF file. 
 
-*!IMPORTANT!*
+**!IMPORTANT!**
 
 "DO NOT ENTER UNITY PLAY MODE" if you are in a process of creating a URDF scene. It damages the export process. It is highly suggested to first create and export the URDF scene. You may run the simulation after you are satisfied with the scene creation and have it exported to URDF.
 
