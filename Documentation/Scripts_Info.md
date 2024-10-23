@@ -3,9 +3,6 @@
 __Flatten.cs__ 
 
 Converts the heirarchy structure that looks something like this 
-Here is an example of the hierarchy structure:
-
-**Example 1:**
 
 - basket_01
   - Collisions
@@ -16,7 +13,7 @@ Here is an example of the hierarchy structure:
       - basket_01
         - basket_01_0
 
-**Example 2:**
+OR
 
 - basket_01
   - Collisions
