@@ -1,4 +1,4 @@
-# ---- INSTRUCTIONS ON CREATING RAI-IMPORTABLE URDF-SCENES IN UNITY ----
+# ---- Instructions On Creating RAI-Importable URDF-Scenes in Unity ----
 
 ## Basic Scene Annotation
 - Follow the basic urdf import steps from "Unity_BotSimulations" to import a robot from URDF file. 
