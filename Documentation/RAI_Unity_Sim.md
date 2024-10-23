@@ -68,8 +68,8 @@ For transforms, we send relative transforms of parent-to-child frames, not the a
 - For objects other than robot in URDF, the RAi converter appends an "_0" to their names. For correct control/manipulation of the object using RAi's KOMO, you need to specify the frame's name along with an "_0" at the end.
 - If you are using mobile robot, then the urdf2rai converter does not recognize the "planar" and various other kinds of joints. You need to modify the file to incorporate those. An example to incorporate "planar joints":
         # Add the following line somewhere around line 180
-        if att == 'planar':
-                print('joint: transXYPhi', end='')
+        'if att == 'planar':
+                print('joint: transXYPhi', end='')'
 
 - If you are using "planar joint", then in case of problems with using KinEdit on newly URDF-to-.g converted file, follow this: Find a line similar to the following under planar joint section of your URDF before using URDF2RAi converter and eliminate it. RAi converter probably needs some further modifications before it can incorporate this:
-   <limit effort="30" velocity="1.0" lower="-2.2" upper="0.7" />
+   '<limit effort="30" velocity="1.0" lower="-2.2" upper="0.7" />'
