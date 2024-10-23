@@ -9,7 +9,7 @@
 
 - Now copy all the objects and make them the children of an empty gameobject, say its name is "Objects". The transform (pos + rot) of this "Objects" should be completely ZERO. 
 
-- Now, attach the script CopyNChildNames and paste it to "Objects" and put the name "Objects" in the source Parent public field. This should copy all these objects with required URDF transformations and paste the result under the world Game Object which must be present somewhere in heirarchy of robot object you imported using URDF importer.
+- Now, attach the script CopyChildNames and paste it to "Objects" and put the name "Objects" in the source Parent public field. This should copy all these objects with required URDF transformations and paste the result under the world Game Object which must be present somewhere in heirarchy of robot object you imported using URDF importer.
 
 - So, now each of your object under "world" should have a heirarchy which looks something like this:
         --YOUR_object
@@ -22,7 +22,7 @@
 
 - Now, export the Robot to URDF (In case of Tiago/Mobile Robots, go and remove the limit line for planar joints in the exported URDF -> Known to Cause Issues)
 
-## Applying Correction to Exported URDF File
+## Save Correct Transform Data for Correction
 
 - Now, go back to your Unity Editor and delete the entire URDF object. So, now you have scene with simple object meshes.
 
@@ -34,21 +34,23 @@
 
 ## Preparation of STL Files
 
-(10) If you do not have the STL files for your objects, then you will need to use Pro-builder tools to create the STL files.
+- If you do not have the STL files for your objects, then you will need to use Pro-builder tools to create the STL files.
 
-(11) Again, consider the "Objects" and set the transform pos + rot of all its children equal to zero (You can attach script Reset.cs to it for this purpose for doing it in ONE GO! -- Remove it after your work is done) -> For preparation to export.
+- Again, consider the "Objects" and set the transform pos + rot of all its children equal to zero (You can attach script Reset.cs to it for this purpose for doing it in ONE GO! -- Remove it after your work is done) -> For preparation to export.
 
-(12) With all these objects selected, go to Tools > Probuilder > Probuilder Window and select "Probuilderize".
+- With all these objects selected, go to Tools > Probuilder > Probuilder Window and select "Probuilderize".
 
-(13) Then export all these objects from Tools > Probuilder > Export > Export STL ASCII. all of them should be exported in a new folder called meshes (Create it in a different directory than robot meshes folder)
+- Then export all these objects from Tools > Probuilder > Export > Export STL ASCII. all of them should be exported in a new folder called meshes (Create it in a different directory than robot meshes folder)
 
-(14) Now, you can delete the "Objects" gameobject and any remaining clutter that you might have produced while doing URDF Export.
+- Now, you can delete the "Objects" gameobject and any remaining clutter that you might have produced while doing URDF Export.
 
-(15) Go to the folder where you have exported the URDF and paste the xxx.JSON file over there that you created earlier. Copy the script "correctPose.py" in the same directory. Open the script and change the name of "output_urdf_file" as per your exported URDF filename.
+## Applying Transforms Correction to URDF File
 
-(16) Run the script and it should produce the corrected version of URDF file.
+- Go to the folder where you have exported the URDF and paste the xxx.JSON file over there that you created earlier. Copy the script "correctPose.py" in the same directory. Open the script and change the name of "output_urdf_file" as per your exported URDF filename.
 
-(9) Now, you need to convert this URDF file to .g format in order to make it RAi-importable. Make sure you have built kinEdit and added its path to environment, available from bin directory of Marc's RAi bare codebase. Copy the exported URDF file to the folder containing urdf2rai.py.
+- Run the script and it should produce the corrected version of URDF file.
+
+- Now, you need to convert this URDF file to .g format in order to make it RAi-importable. Make sure you have built kinEdit and added its path to environment, available from bin directory of Marc's RAi bare codebase. Copy the exported URDF file to the folder containing urdf2rai.py.
 
 (17) Now, copy this URDF file along with the meshes folder (in form of STL files that you generated earlier) and paste it in /path/to/urdf2rai.py etc.. for URDF2RAI conversion. 
 
