@@ -1,33 +1,38 @@
 # ---- INSTRUCTIONS ON CREATING RAI-IMPORTABLE URDF-SCENES IN UNITY ----
 
-(1) Follow the basic urdf import steps from "Unity_BotSimulations" to import a robot from URDF file. 
+## Basic Scene Annotation
+- Follow the basic urdf import steps from "Unity_BotSimulations" to import a robot from URDF file. 
 !!IMPORTANT!!
 "DO NOT ENTER UNITY PLAY MODE" if you are in a process of creating a URDF scene. It damages the export process. It is highly suggested to first create and export the URDF scene. You may run the simulation after you are satisfied with the scene creation and have it exported to URDF.
 
-(2) To reduce complexity and help in debugging, we shall be creating the URDF for the "scene only", without a robot (You may import a robot separately again through its URDF). So, delete all the children of world. Create the Scene howsoever you like. Make sure all the objects are in the correct locations. Keep moving them until you are satisfied. At this point, you need to make sure that these objects DO NOT HAVE any more children (If they have, then take them out so that their transforms are preserved)
+- To reduce complexity and help in debugging, we shall be creating the URDF for the "scene only", without a robot (You may import a robot separately again through its URDF). So, delete all the children of world. Create the Scene howsoever you like. Make sure all the objects are in the correct locations. Keep moving them until you are satisfied. At this point, you need to make sure that these objects DO NOT HAVE any more children (If they have, then take them out so that their transforms are preserved)
 
-(3) Now copy all the objects and make them the children of an empty gameobject, say its name is "Objects". The transform (pos + rot) of this "Objects" should be completely ZERO. 
+- Now copy all the objects and make them the children of an empty gameobject, say its name is "Objects". The transform (pos + rot) of this "Objects" should be completely ZERO. 
 
-(4) Now, attach the script CopyNChildNames and paste it to "Objects" and put the name "Objects" in the source Parent public field. This should copy all these objects with required URDF transformations and paste the result under the world Game Object which must be present somewhere in heirarchy of robot object you imported using URDF importer.
+- Now, attach the script CopyNChildNames and paste it to "Objects" and put the name "Objects" in the source Parent public field. This should copy all these objects with required URDF transformations and paste the result under the world Game Object which must be present somewhere in heirarchy of robot object you imported using URDF importer.
 
-(7) So, now each of your object under "world" should have a heirarchy which looks something like this:
+- So, now each of your object under "world" should have a heirarchy which looks something like this:
         --YOUR_object
           |--visuals
           |--collisions
 
-(8) Go to the root of your URDF robot object and rename it as per your scene.
+- Go to the root of your URDF robot object and rename it as per your scene.
 
-(8) Now, you are done and can export the object in URDF format by clicking on "Export robot to URDF" under "URDF Robot" script attached to root of your URDF scene object.
+- Now, you are done and can export the object in URDF format by clicking on "Export robot to URDF" under "URDF Robot" script attached to root of your URDF scene object.
 
-(5) Now, export the Robot to URDF (In case of Tiago/Mobile Robots, go and remove the limit line for planar joints in the exported URDF -> Known to Cause Issues)
+- Now, export the Robot to URDF (In case of Tiago/Mobile Robots, go and remove the limit line for planar joints in the exported URDF -> Known to Cause Issues)
 
-(6) Now, go back to your Unity Editor and delete the entire URDF object. So, now you have scene with simple object meshes.
+## Applying Correction to Exported URDF File
 
-(7) Attach the script SaveTransformstoJSON something like that to the "Objects" which contains the copy of all the objects in the scene as its children. Enter the file name in which you would like to save the transform data of all objects in your scene.
+- Now, go back to your Unity Editor and delete the entire URDF object. So, now you have scene with simple object meshes.
 
-(8) Enter into Unity Play Mode and you should see the message saying that the transforms data has been saved to transform_data.JSON file. Exit the Play Mode.
+- Attach the script SaveTransformstoJSON something like that to the "Objects" which contains the copy of all the objects in the scene as its children. Enter the file name in which you would like to save the transform data of all objects in your scene.
 
-(9) At this point, you should have STL files for all your gameobjects in the scene. Otherwise, things won't work out properly.
+- Enter into Unity Play Mode and you should see the message saying that the transforms data has been saved to transform_data.JSON file. Exit the Play Mode.
+
+- At this point, you should have STL files for all your gameobjects in the scene. Otherwise, things won't work out properly.
+
+## Preparation of STL Files
 
 (10) If you do not have the STL files for your objects, then you will need to use Pro-builder tools to create the STL files.
 
