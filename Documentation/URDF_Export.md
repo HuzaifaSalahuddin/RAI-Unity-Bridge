@@ -36,11 +36,11 @@
 
 - Run the script and it should produce the corrected version of URDF file.
 
-- At this point, you should have STL files for all your gameobjects in the scene. Otherwise, things won't work out properly.
+- At this point, you should have STL files for all your gameobjects in the scene. Other file formats seem to create weird problems.
 
 ## Preparation of STL Files
 
-- If you do not have the STL files for your objects, then you will need to use Pro-builder tools to create the STL files.
+- If you do not have the STL files for your objects, then you will need to use Pro-builder tools to create the STL files. Install the Pro-builder Tools from Package Manager before continuing.
 
 - Again, consider the "Objects" and set the transform pos + rot of all its children equal to zero (You can attach script Reset.cs to it for this purpose for doing it in ONE GO! -- Remove it after your work is done) -> For preparation to export.
 
@@ -54,13 +54,7 @@
 
 (17) Now, copy this URDF file along with the meshes folder (in form of STL files that you generated earlier) and paste it in /path/to/urdf2rai.py etc.. for URDF2RAI conversion. 
 
-(10) Open the terminal from current directory and run the following two commands:
-        > python3 urdf2rai.py <your_file>.urdf > z.1.g
-        > kinEdit -file z.1.g -cleanOnly
-
-(11) This will allow you to view your object. Press "Enter" to animate your Robot (Well you don't have it right now LOL). Press "x" to export the file in .g format. Then, press q to exit the configuration viewer.
-
-(12) Run the command: mv z.g <your_desired_filename>.g
+(10) Follow the steps similar to what is described [here](https://github.com/MarcToussaint/rai-robotModels/blob/master/panda/HOWTO.sh) for conversion of URDF to .g file.
 
 (13) Copy both the URDF and created file to RAI-ROBOTMODELS path or your Python Notebook directory and you should now be able to import these objects as RAI objects.
 
@@ -68,7 +62,3 @@
 
 (15) Also, create a new .URDF file in which you combine both scene and robot urdfs. This is just for RAi to get the parent-child relationship amongst various frames in the scene and nothing else. You may name it as "scene.urdf". 
 
-There are three main tasks that you need to complete for properly exporting your scene in URDF format:
-(1)
-(2)
-(3)
