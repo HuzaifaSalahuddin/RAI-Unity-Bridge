@@ -1,13 +1,14 @@
 # RAI-Unity-Bridge
 
 ## System Specs:
--- For Unity --
+
+### For Unity:
 Windows 11
 64-bit operating system, x64-based processor
 Meta Quest Link App
 Unity Editor: 2022.3.41f1
 
--- For RAI --
+### For RAI:
 Ubuntu 22.04.4 LTS
 6.5.0-45-generic Kernel
 NVIDIA Driver Version: 560.28.03
