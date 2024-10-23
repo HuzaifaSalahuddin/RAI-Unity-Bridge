@@ -32,6 +32,10 @@
 
 - Enter into Unity Play Mode and you should see the message saying that the transforms data has been saved to transform_data.JSON file. Exit the Play Mode.
 
+- Go to the folder where you have exported the URDF and paste the xxx.JSON file over there that you created earlier. Copy the script "correctPose.py" in the same directory. Open the script and change the name of "output_urdf_file" as per your exported URDF filename.
+
+- Run the script and it should produce the corrected version of URDF file.
+
 - At this point, you should have STL files for all your gameobjects in the scene. Otherwise, things won't work out properly.
 
 ## Preparation of STL Files
@@ -45,12 +49,6 @@
 - Then export all these objects from Tools > Probuilder > Export > Export STL ASCII. all of them should be exported in a new folder called meshes (Create it in a different directory than robot meshes folder)
 
 - Now, you can delete the "Objects" gameobject and any remaining clutter that you might have produced while doing URDF Export.
-
-## Applying Transforms Correction to URDF File
-
-- Go to the folder where you have exported the URDF and paste the xxx.JSON file over there that you created earlier. Copy the script "correctPose.py" in the same directory. Open the script and change the name of "output_urdf_file" as per your exported URDF filename.
-
-- Run the script and it should produce the corrected version of URDF file.
 
 - Now, you need to convert this URDF file to .g format in order to make it RAi-importable. Make sure you have built kinEdit and added its path to environment, available from bin directory of Marc's RAi bare codebase. Copy the exported URDF file to the folder containing urdf2rai.py.
 
