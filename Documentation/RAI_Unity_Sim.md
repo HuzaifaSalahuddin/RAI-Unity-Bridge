@@ -17,6 +17,7 @@ In such an environment, the movement of robot in unity is controlled by RAi. Thi
 - Delete the "Main Camera" Game Object. For VR Headset, we are going to add XR Origin. Add GameObject >> XR >> "XR Origin (VR)" to the scene.
 - Attach the "MoveObjects.cs" script to the XR Origin (XR Rig) Game Object.
 - At this point, your Gameobjects' heirarchy should look something like the following. Make sure you have all these objects in your heirarchy:
+  
         -- Light Source
   
         -- XR Interaction Manager
