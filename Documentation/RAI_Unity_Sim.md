@@ -18,13 +18,21 @@ In such an environment, the movement of robot in unity is controlled by RAi. Thi
 - Attach the "MoveObjects.cs" script to the XR Origin (XR Rig) Game Object.
 - At this point, your Gameobjects' heirarchy should look something like the following. Make sure you have all these objects in your heirarchy:
         -- Light Source
+  
         -- XR Interaction Manager
+  
         -- XR Origin (XR Rig)
+  
         -- YOUR-ROBOT
+  
         -- SCENE-OBJECT-01
+  
         -- SCENE-OBJECT-02
+  
         -- -----------------------
+  
         -- ---other scene objects---
+  
 - Now, go to XR Interaction Manager and add the "Input Action Manager" script to it by clicking on "Add Component". Next, expand the script section in inspector's tab and then add XRI Default Input Actions in Actions Asset.
 - Go to Edit >> Project settings and enable Oculus from "XR Plugin Management".
 - Make sure you have Meta Quest Link app installed on your Windows (It doesn't work on Linux/Ubuntu). Open the app. 
@@ -38,7 +46,7 @@ In such an environment, the movement of robot in unity is controlled by RAi. Thi
 
 - The convention of defining XYZ axes is different in RAi and unity. RAi uses the standard convention (e.g z up) while the unity uses non-conventional definition (e.g y up). For the rotation, the RAi uses right-hand convention while the unity uses left-hand convention for rotation. The details for transformation are:
 
-## Axis Conversion Table
+### Axis Conversion Table
 
 | RAI  | UNITY |
 |------|-------|
@@ -46,9 +54,9 @@ In such an environment, the movement of robot in unity is controlled by RAi. Thi
 | Y    | -X     |
 | Z    | Y    |
 
-- For transforms, we send relative transforms of parent-to-child frames, not the absolute transforms in global frame (as it causes serious problems due to different axes convention) from RAi to unity. Then, these rotations in X, Y and Z axes are synchronized with the local rotations in unity as per the following protocol:
+For transforms, we send relative transforms of parent-to-child frames, not the absolute transforms in global frame (as it causes serious problems due to different axes convention) from RAi to unity. Then, these rotations in X, Y and Z axes are synchronized with the local rotations in unity as per the following protocol:
 
-## Rotation Conversion Table
+### Rotation Conversion Table
 
 | RAI  | UNITY |
 |------|-------|
