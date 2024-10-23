@@ -45,7 +45,7 @@ In such an environment, the movement of robot in unity is controlled by RAi. Thi
 
 ## _Some_Important_Notes_  
 
-- The convention of defining XYZ axes is different in RAi and unity. RAi uses the standard convention (e.g z up) while the unity uses non-conventional definition (e.g y up). For the rotation, the RAi uses right-hand convention while the unity uses left-hand convention for rotation. The details for transformation are:
+The convention of defining XYZ axes is different in RAi and unity. RAi uses the standard convention (e.g z up) while the unity uses non-conventional definition (e.g y up). For the rotation, the RAi uses right-hand convention while the unity uses left-hand convention for rotation. The details for transformation are:
 
 
 | RAI  | UNITY |
