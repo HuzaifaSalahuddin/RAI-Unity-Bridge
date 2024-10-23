@@ -47,7 +47,6 @@ In such an environment, the movement of robot in unity is controlled by RAi. Thi
 
 - The convention of defining XYZ axes is different in RAi and unity. RAi uses the standard convention (e.g z up) while the unity uses non-conventional definition (e.g y up). For the rotation, the RAi uses right-hand convention while the unity uses left-hand convention for rotation. The details for transformation are:
 
-### Axis Conversion Table
 
 | RAI  | UNITY |
 |------|-------|
@@ -57,7 +56,6 @@ In such an environment, the movement of robot in unity is controlled by RAi. Thi
 
 For transforms, we send relative transforms of parent-to-child frames, not the absolute transforms in global frame (as it causes serious problems due to different axes convention) from RAi to unity. Then, these rotations in X, Y and Z axes are synchronized with the local rotations in unity as per the following protocol:
 
-### Rotation Conversion Table
 
 | RAI  | UNITY |
 |------|-------|
