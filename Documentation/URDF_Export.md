@@ -3,7 +3,8 @@
 ## Basic Scene Annotation
 - Follow the basic urdf import steps from "Unity_BotSimulations" to import a robot from URDF file. 
 
-**!!IMPORTANT!!**
+*!IMPORTANT!*
+
 "DO NOT ENTER UNITY PLAY MODE" if you are in a process of creating a URDF scene. It damages the export process. It is highly suggested to first create and export the URDF scene. You may run the simulation after you are satisfied with the scene creation and have it exported to URDF.
 
 - To reduce complexity and help in debugging, we shall be creating the URDF for the "scene only", without a robot (You may import a robot separately again through its URDF). So, delete all the children of world. Create the Scene howsoever you like. Make sure all the objects are in the correct locations. Keep moving them until you are satisfied. At this point, you need to make sure that these objects DO NOT HAVE any more children (If they have, then take them out so that their transforms are preserved)
