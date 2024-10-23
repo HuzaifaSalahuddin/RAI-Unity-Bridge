@@ -24,7 +24,7 @@
 
 - Now, export the Robot to URDF (In case of Tiago/Mobile Robots, go and remove the limit line for planar joints in the exported URDF -> Known to Cause Issues)
 
-## Save Correct Transform Data for Correction
+## Apply Correction to Transform Data
 
 - Now, go back to your Unity Editor and delete the entire URDF object. So, now you have scene with simple object meshes.
 
