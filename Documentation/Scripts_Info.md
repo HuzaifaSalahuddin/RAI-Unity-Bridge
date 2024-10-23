@@ -29,7 +29,7 @@ to something like the following:
 - basket_01
   - basket_01_0
 
- So, it essentially flattens the structure so that it matches this one --> Look for update!
+ So, it essentially flattens the structure --> Look for update!
 
 __removeTrash.cs__ 
 
