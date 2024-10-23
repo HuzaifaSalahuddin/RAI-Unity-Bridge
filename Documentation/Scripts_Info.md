@@ -3,30 +3,34 @@
 __Flatten.cs__ 
 
 Converts the heirarchy structure that looks something like this 
-basket_01
- |-Collisions
-  |--unnamed
-   |---Box
- |-Visuals
-  |--Visuals
-   |---basket_01
-    |----basket_01_0
-    
-    OR 
+Here is an example of the hierarchy structure:
 
-basket_01
- |-Collisions
-  |--unnamed
-   |---Box
- |-Visuals
-  |--unnamed
-   |---basket_01
-    |----basket_01_0
+**Example 1:**
+
+- basket_01
+  - Collisions
+    - unnamed
+      - Box
+  - Visuals
+    - Visuals
+      - basket_01
+        - basket_01_0
+
+**Example 2:**
+
+- basket_01
+  - Collisions
+    - unnamed
+      - Box
+  - Visuals
+    - unnamed
+      - basket_01
+        - basket_01_0
 
 to something like the following:
 
-basket_01
- |-basket_01_0
+- basket_01
+  - basket_01_0
 
  So, it essentially flattens the structure so that it matches this one --> Look for update!
 
