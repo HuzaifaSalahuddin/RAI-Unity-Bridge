@@ -43,7 +43,7 @@ In such an environment, the movement of robot in unity is controlled by RAi. Thi
 - You should now be able to see your environment through headset. Use Pick_Place jupyter notebook with RAi from Ubuntu machine to view an example pick and place simulation through your headset.  
 
 
-## _Some_Important_Notes_  
+## RAI-Unityu Axes Transformations   
 
 The convention of defining XYZ axes is different in RAi and unity. RAi uses the standard convention (e.g z up) while the unity uses non-conventional definition (e.g y up). For the rotation, the RAi uses right-hand convention while the unity uses left-hand convention for rotation. The details for transformation are:
 
@@ -64,6 +64,7 @@ For transforms, we send relative transforms of parent-to-child frames, not the a
 | Z    | -Y    |
 
 
+## Some Important Notes
 - For objects other than robot in URDF, the RAi converter appends an "_0" to their names. For correct control/manipulation of the object using RAi's KOMO, you need to specify the frame's name along with an "_0" at the end.
 - If you are using mobile robot, then the urdf2rai converter does not recognize the "planar" and various other kinds of joints. You need to modify the file to incorporate those. An example to incorporate "planar joints":
         # Add the following line somewhere around line 180
