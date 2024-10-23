@@ -50,15 +50,16 @@
 
 - Now, you can delete the "Objects" gameobject and any remaining clutter that you might have produced while doing URDF Export.
 
+## Preparation of .g File for RAi
 - Now, you need to convert this URDF file to .g format in order to make it RAi-importable. Make sure you have built kinEdit and added its path to environment, available from bin directory of Marc's RAi bare codebase. Copy the exported URDF file to the folder containing urdf2rai.py.
 
-(17) Now, copy this URDF file along with the meshes folder (in form of STL files that you generated earlier) and paste it in /path/to/urdf2rai.py etc.. for URDF2RAI conversion. 
+- Now, copy this URDF file along with the meshes folder (in form of STL files that you generated earlier) and paste it in /path/to/urdf2rai.py etc.. for URDF2RAI conversion. 
 
-(10) Follow the steps similar to what is described [here](https://github.com/MarcToussaint/rai-robotModels/blob/master/panda/HOWTO.sh) for conversion of URDF to .g file.
+- Make sure you have already built [kinEdit](https://github.com/MarcToussaint/rai-maintenance/blob/master/help/kinEdit.md). Follow the steps similar to what is described [here](https://github.com/MarcToussaint/rai-robotModels/blob/master/panda/HOWTO.sh) for conversion from URDF to .g file.
 
-(13) Copy both the URDF and created file to RAI-ROBOTMODELS path or your Python Notebook directory and you should now be able to import these objects as RAI objects.
+- Copy both the URDF and created file to RAI-ROBOTMODELS path or your Python Notebook directory and you should now be able to import these objects as RAI objects.
 
-(14) Now, you have created your scene. It is time to import the robot URDFs and .g files. Do it separately in both RAi and Unity. 
+- Now, you have created your scene. It is time to import the robot URDFs and .g files. Do it separately in both RAi and Unity. 
 
-(15) Also, create a new .URDF file in which you combine both scene and robot urdfs. This is just for RAi to get the parent-child relationship amongst various frames in the scene and nothing else. You may name it as "scene.urdf". 
+- Also, create a new .URDF file in which you combine both scene and robot urdfs. This is just for RAi to get the parent-child relationship amongst various frames in the scene and nothing else. You may name it as "scene.urdf". 
 
