@@ -40,7 +40,7 @@ In such an environment, the movement of robot in unity is controlled by RAi. Thi
 - The Meta Quest Link app should be logged in with the same account as your headset. Make sure to enable apps "from unknown sources" in the Quest Link app.
 - Now, connect your Oculus through cable and enable Quest link in headset.
 - Enter into unity play mode from unity.
-- You should now be able to see your environment through headset. Use Pick_Place jupyter notebook with RAi from Ubuntu machine to view an example pick and place simulation through your headset.  
+- You should now be able to see your environment through headset. Use [Pick_Place jupyter notebook](https://github.com/HuzaifaSalahuddin/RAI-Unity-Bridge/blob/main/Example%20RAi%20Scripts/Pick_place.ipynb) with RAi from Ubuntu machine to view an example pick and place simulation through your headset.  
 
 
 ## RAI-Unity Axes Transformations   
