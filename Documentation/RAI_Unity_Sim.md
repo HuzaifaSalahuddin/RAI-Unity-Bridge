@@ -1,7 +1,7 @@
 # Running a Parallel RAI-UNITY Simulation
 In such an environment, the movement of robot in unity is controlled by RAi. This RAi-Unity simulation environment can ve viewed in VR Headset through Quest Link/Air Link (Tested on Oculus Quest 2 (or Oculus Quest Series in general) for now).
 
-- Import the scene from URDF and .g files in unity and RAi respectively.
+- Open your Unity Project and load the scene. On RAI side, load .g files in your environment.
 - Now, copy the C# scripts "Flatten.cs", "removeTrash.cs", "MoveObjects.cs" & "SimpleJSON.cs" to the assets folder in your current unity project.
 - Drag and attach the removeTrash script to the root of imported URDF game object. This should remove all the scripts, physics components attached throughout its heirarchy.
 - Now, attach "Flatten" script to the same root URDF Game Object.
