@@ -72,5 +72,5 @@ For transforms, we send relative transforms of parent-to-child frames, not the a
                 print('joint: transXYPhi', end='')
 
 - If you are using "planar joint", then in case of problems with using KinEdit on newly URDF-to-.g converted file, follow this: Find a line similar to the following under planar joint section of your URDF before using URDF2RAi converter and eliminate it. RAi converter probably needs some further modifications before it can incorporate this:
-```urdf
-  <limit effort="30" velocity="1.0" lower="-2.2" upper="0.7" />
+  ```urdf
+    <limit effort="30" velocity="1.0" lower="-2.2" upper="0.7" />
