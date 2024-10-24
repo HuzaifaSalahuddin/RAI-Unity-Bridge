@@ -79,3 +79,7 @@ Something that converts like /path/to/meshes/blah/blah to meshes/blah/blah (Dele
 __configure.py__
 
 Flattens the directory structure of the specified folder
+
+__Pick_place.ipynb__
+
+This contains the communication module implemented on RAI's side. It sends the relative frame data through IP towards Unity. On Unity Side, __MoveObjects.cs__  receives this data and moves the objects accordingly.
