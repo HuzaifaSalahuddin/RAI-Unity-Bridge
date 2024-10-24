@@ -82,4 +82,4 @@ Flattens the directory structure of the specified folder
 
 __Pick_place.ipynb__
 
-This contains the communication module implemented on RAI's side. It sends the relative frame data through IP towards Unity. On Unity Side, __MoveObjects.cs__  receives this data and moves the objects accordingly.
+This contains the communication module implemented on RAI's side. It sends the relative frame data through network towards Unity. Http listener on Unity Side implemented in __MoveObjects.cs__  receives this data and moves the objects accordingly.
