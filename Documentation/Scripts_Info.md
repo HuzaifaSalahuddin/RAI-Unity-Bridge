@@ -39,13 +39,13 @@ __CopyChildNames.cs__
 
 This one copies all the children of a "source parent" to "target parent" and convert each of the children (say 'bowl') into something that looks like this:
 
-bowl
+- bowl
 
- - Visuals
+  - Visuals
    
-   - bowl
+    - bowl
      
- - Collisions
+  - Collisions
    
 (Basically used for making outside objects the children of robot's world so that they are ready for export to URDF format)  --> Look for updates (Maybe changing the name of grandchildren?)
 
