@@ -6,7 +6,8 @@ In such an environment, the movement of robot in unity is controlled by RAi. Thi
 - Drag and attach the removeTrash script to the root of imported URDF game object. This should remove all the scripts, physics components attached throughout its heirarchy.
 - Now, attach "Flatten" script to the same root URDF Game Object.
 - Make sure the IP address for communication to machine running RAi is set correctly in these scripts. Also make sure that all network firewalls are "turned off" in Windows.
-- Attach the "MoveObjects.cs" script to the Main Camera Game Object.
+- Attach the "MoveObjects.cs" script to the Main Camera Game Object. This will implement the Http listener for moving the objects according to received frame data from RAI.
+- [Pick_Place jupyter notebook](https://github.com/HuzaifaSalahuddin/RAI-Unity-Bridge/blob/main/Example%20RAi%20Scripts/Pick_place.ipynb) implements communication module on RAI's side. Use this notebook to initiate a simulation that drives the robot in Unity controlled through RAI.
 
 # Running a VR Simulation
 - Create a new project in Unity and install the following packages from package manager:
