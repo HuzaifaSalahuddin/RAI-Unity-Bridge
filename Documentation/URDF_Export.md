@@ -9,9 +9,9 @@
 
 - To reduce complexity and help in debugging, we shall be creating the URDF for the "scene only", without a robot (You may import a robot separately again through its URDF). So, delete all the children of world. Create the Scene howsoever you like. Make sure all the objects are in the correct locations. Keep moving them until you are satisfied. At this point, you need to make sure that these objects DO NOT HAVE any more children (If they have, then take them out so that their transforms are preserved)
 
-- Now copy all the objects and make them the children of an empty gameobject, say its name is "Objects". The transform (pos + rot) of this "Objects" should be completely ZERO. 
+- Now copy all the objects and make them the children of an empty gameobject, put its name as "Objects". The transform (pos + rot) of this "Objects" should be completely ZERO. 
 
-- Now, attach the script CopyChildNames and paste it to "Objects" and put the name "Objects" in the source Parent public field. This should copy all these objects with required URDF transformations and paste the result under the world Game Object which must be present somewhere in heirarchy of robot object you imported using URDF importer.
+- Now, attach the script CopyChildNames and paste it to "Objects" and put the name "Objects" in the source Parent public field. This should copy all these objects with required URDF transformations and paste the result under the world Game Object which must be present somewhere in heirarchy of robot object you imported using URDF importer. Immediately remove the script after that to avoid getting multiple copies of objects. You may delete the "Objects" gameobject now.
 
 - So, now each of your object under "world" should have a heirarchy which looks something like this:
         --YOUR_object
