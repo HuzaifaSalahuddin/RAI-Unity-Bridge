@@ -1,5 +1,5 @@
 #!/home/huzaifa/anaconda3/envs/RAI/bin/python
-
+# How to: urdf2rai.py panda_arm_hand.urdf > z.1.g
 import sys
 from lxml import etree
 import argparse
