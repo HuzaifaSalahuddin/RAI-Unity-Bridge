@@ -39,7 +39,7 @@
 
 ## Preparation of STL Files
 
-- If you do not have the STL files for your objects, then you will need to use Pro-builder tools to create the STL files. Install the Pro-builder Tools from Package Manager before continuing.
+- If you do not have the STL files for your objects, then you will need to use Pro-builder tools to create the STL files. Install the Probuilder Tools from Package Manager before continuing.
 
 - Again, consider the "Objects" and set the transform pos + rot of all its children equal to zero (You can attach script Reset.cs to it for this purpose for doing it in ONE GO! -- Remove it after your work is done) -> For preparation to export.
 
