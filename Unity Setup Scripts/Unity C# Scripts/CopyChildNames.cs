@@ -9,7 +9,7 @@ namespace Unity.Robotics.UrdfImporter
     public class CopyChildNames : MonoBehaviour
     {
         // Input fields for source and target GameObject names
-        public string sourceParentName = "kitchen_creation_kit"; // The name of the GameObject whose children's names will be copied
+        public string sourceParentName = "Objects"; // The name of the GameObject whose children's names will be copied
         public string targetParentName = "world"; // The name of the GameObject under which new children will be created
 
         // This method will be called automatically when the script is loaded or when values change in the Inspector
