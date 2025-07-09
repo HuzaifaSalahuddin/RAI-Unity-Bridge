@@ -1,5 +1,5 @@
 # RAI-Unity Basic Usage & Setup Documentation
-You may follow the following scripts in given order for learning to set up your environment. Here is the brief description of each:
+You may follow the following READMEs in given order for learning to set up your environment. Here is the brief description of each:
 - **Scripts Info** : This gives some details on usage of each of the scripts in Unity and RAI Scripts Folders.
 - **URDF Import** : This explains how to import a robot from URDF file in Unity.
 - **URDF Export** : If you want to create your own scene in unity and then transfer it to RAi, you may take a look at this script.
