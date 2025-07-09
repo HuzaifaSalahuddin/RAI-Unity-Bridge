@@ -27,7 +27,7 @@
 
 - Now, go back to your Unity Editor and delete the entire URDF object. So, now you have scene with simple object meshes.
 
-- Attach the script SaveTransformstoJSON something like that to the "Objects" which contains the copy of all the objects in the scene as its children. Enter the file name in which you would like to save the transform data of all objects in your scene.
+- Attach the script SaveTransformstoJSON to the "Objects" which contains the copy of all the objects in the scene as its children. Enter the file name in which you would like to save the transform data of all objects in your scene.
 
 - Enter into Unity Play Mode and you should see the message saying that the transforms data has been saved to transform_data.JSON file. Exit the Play Mode.
 
