@@ -11,7 +11,7 @@
 
 - Now copy all the objects and make them the children of an empty gameobject, put its name as "Objects". The transform (pos + rot) of this "Objects" should be completely ZERO. 
 
-- Now, attach the script CopyChildNames and paste it to "Objects" and put the name "Objects" in the source Parent public field. This should copy all these objects with required URDF transformations and paste the result under the world Game Object which must be present somewhere in heirarchy of robot object you imported using URDF importer. Immediately remove the script after that to avoid getting multiple copies of objects. You may delete the "Objects" gameobject now.
+- Now, attach the script CopyChildNames and paste it to "Objects" and put the name "Objects" in the source Parent public field. This should copy all these objects with required URDF transformations and paste the result under the world Game Object which must be present somewhere in heirarchy of robot object you imported using URDF importer. Immediately remove the script after that to avoid getting multiple copies of objects. You may delete the "Objects" gameobject now after verifying that all the objects are copied properly.
 
 - So, now each of your object under "world" should have a heirarchy which looks something like this:
         --YOUR_object
