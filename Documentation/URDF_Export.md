@@ -11,14 +11,12 @@
 
 - Now copy all the objects (avoid copying light sources) and make them the children of an empty gameobject, put its name as "Objects". The transform (pos + rot) of this "Objects" should be completely ZERO. 
 
-- Now, attach the script CopyChildNames and paste it to "Objects" and put the name "Objects" in the source Parent public field. This should copy all these objects with required URDF transformations and paste the result under the world Game Object which must be present somewhere in heirarchy of robot object you imported using URDF importer. Immediately remove the script after that to avoid getting multiple copies of objects. 
-
+- Now, attach the script CopyChildNames and paste it to "Objects" and put the name "Objects" in the source Parent public field. This should copy all these objects with required URDF transformations and paste the result under the world Game Object which must be present somewhere in heirarchy of robot object you imported using URDF importer. Immediately remove the script after that to avoid getting multiple copies of objects. Do not delete the "Objects" gameobject. You will need this later on!
 - So, now each of your object under "world" should have a heirarchy which looks something like this:
         --YOUR_object
           |--visuals
           |--collisions
 
-- You may delete the "Objects" gameobject now after verifying that all the objects are copied properly with the structure stated above.
 - Go to the root of your URDF robot object and rename it as per your scene.
 
 - Now, you are done and can export the object in URDF format by clicking on "Export robot to URDF" under "URDF Robot" script attached to root of your URDF scene object.
