@@ -22,10 +22,8 @@
 - Now, you are done and can export the object in URDF format by clicking on "Export robot to URDF" under "URDF Robot" script attached to root of your URDF scene object.
 
 - Now, export the Robot to URDF (In case of Tiago/Mobile Robots, go and remove the limit line for planar joints in the exported URDF -> Known to Cause Issues)
-- 
-**IMPORTANT!**
 
-*"After the first export, if you feel like exporting once more to pass-on some adjustments/updates that you made in your URDF object, you cannot do that with the same URDF object you just exported because first export fully messes up the overall configuration of URDF object. So, you need to start from the beginning all over again. Therefore, make sure to export the URDF scene only once you are fully satisfied with all the adjustments.*
+*After the first export, if you feel like exporting once more to pass-on some adjustments/updates that you made in your URDF object, you cannot do that with the same URDF object you just exported because first export fully messes up the overall configuration of URDF object. So, you need to start from the beginning all over again. Therefore, make sure to export the URDF scene only once you are fully satisfied with all the adjustments.*
 
 ## Apply Correction to Transform Data
 
