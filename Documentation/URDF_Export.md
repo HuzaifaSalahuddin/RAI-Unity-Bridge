@@ -7,7 +7,7 @@
 
 *"DO NOT ENTER UNITY PLAY MODE" if you are in a process of creating a URDF scene. It damages the export process. It is highly suggested to first create and export the URDF scene. You may run the simulation after you are satisfied with the scene creation and have it exported to URDF.*
 
-- To reduce complexity and help in debugging, we shall be creating the URDF for the "scene only", without a robot (You may import a robot separately again through its URDF). So, delete all the children of world. Create the Scene howsoever you like. Make sure all the objects are in the correct locations. Keep moving them until you are satisfied. At this point, you need to make sure that these objects DO NOT HAVE any more children (If they have, then take them out so that their transforms are preserved). Also, there should not be any spaces within the names of gameobjects. If a gameobject is named as "X Y", rename it as "X_Y".
+- Create the Scene howsoever you like. Make sure all the objects are in the correct locations. Keep moving them until you are satisfied. At this point, you need to make sure that these objects DO NOT HAVE any more children (If they have, then take them out so that their transforms are preserved). Also, there should not be any spaces within the names of gameobjects. If a gameobject is named as "X Y", rename it as "X_Y".
 
 - Now copy all the objects (avoid copying light sources) and make them the children of an empty gameobject, put its name as "Objects". The transform (pos + rot) of this "Objects" should be completely ZERO. 
 
@@ -60,7 +60,6 @@
 
 - Copy both the URDF and created file to RAI-ROBOTMODELS path or your Python Notebook directory and you should now be able to import these objects as RAI objects.
 
-- Now, you have created your scene. It is time to import the robot URDFs and .g files. Do it separately in both RAi and Unity. 
 
-- Also, create a new .URDF file in which you combine both scene and robot urdfs. This is just for RAi to get the parent-child relationship amongst various frames in the scene and nothing else. You may name it as "scene.urdf". 
+So now, you are done with the creation of .g and .urdf files for your scene. Import them inside RAi using the Pick_Place notebook and verify if everything works as intended. Then, you can go back to Unity and delete the extra copied objects other than robot links in your URDF gameobject. Also, you may copy the all the children gameobjects of "Objects" out of this gameobject. At this point, it is safe to delete "Objects". So, now you should have a robot which is a URDF gameobject and other objects are simple gameobjects without any URDF compoenents attached to them. Now, you may proceed to RAI_Unity_Sim if you want a running simulation connecting both RAI and Unity.
 
