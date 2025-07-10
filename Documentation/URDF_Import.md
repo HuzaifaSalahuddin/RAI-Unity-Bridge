@@ -5,19 +5,18 @@
 2. Install the URDF importer unity package by following instructions [here](https://github.com/Unity-Technologies/URDF-Importer).
 3. Place the urdf folder in [correct location](https://github.com/Unity-Technologies/Unity-Robotics-Hub/blob/main/tutorials/urdf_importer/urdf_appendix.md#file-hierarchy).
 4. Open Urdf file of your model and make sure the line pointing to location of mesh files relative to urdf file is correct. If you see something like "model://", remove it and rectify the location.
-5. Apparently, unity requires libdl.so which is not present in mentioned Ubuntu version. So, find out the location of libdl.so.2 in your Ubuntu which is typically found in /usr/lib/x86_64-linux-gnu and then create a symlink from libdl.so to libdl.so.2 in the same directory.
-6. Import the URDF following the instructions from github and make sure "Articulation Body" component is assigned to it inside unity.
-7. Make sure that the imported Game object contains "world" somewhere in the heirarchy. If not, then manually do it. All the robot links (including base link/ base footprint) should be the children of world frame.
+5. Import the URDF following the instructions from github and make sure "Articulation Body" component is assigned to it inside unity.
+6. Make sure that the imported Game object contains "world" somewhere in the heirarchy. If not, then manually do it. All the robot links (including base link/ base footprint) should be the children of world frame.
 
 ## Running URDF Simulation with URDF Importer Package
-8. Now, in order to avoid undesired behaviour of robot, you need to follow the following steps:
+7. Now, in order to avoid undesired behaviour of robot, you need to follow the following steps:
         - Disable "Gravity" from inspector's tab after clicking on the "robot name" you imported in the heirarchy tab.
         - Set the root of articulation body to "immovable".
         - In the parent and all the children of the robot articulation body, set the 'drive type' to "target" manually for all of them.
         - Click on the "robot name" you imported from heirarchy tab and then in the inspector's tab under the Controller (Script) section of it, set all the parameters to 0 (In case of manual control, you would be required to change the values of "Force limit" and "Speed").
-9. If you write a script for robot, make sure to drag the script from Assets and attach it to your robot articulation body in the heirarchy tab. In case of successful attachment, you should be able to see the script in inspector's tab when clicked on your robot in heirarchy tab.
-10. In the top left menu "within the scene window", make sure the rotation is set to "pivot" instead of "center".
-11. Now if you press the run button, you should be able to control your robot using the arrow keys!
+8. If you write a script for robot, make sure to drag the script from Assets and attach it to your robot articulation body in the heirarchy tab. In case of successful attachment, you should be able to see the script in inspector's tab when clicked on your robot in heirarchy tab.
+9. In the top left menu "within the scene window", make sure the rotation is set to "pivot" instead of "center".
+10. Now if you press the run button, you should be able to control your robot using the arrow keys!
 
 
 ### Some Useful Resources for Well-Known Robots:
