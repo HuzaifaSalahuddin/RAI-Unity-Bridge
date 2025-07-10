@@ -7,7 +7,7 @@ In such an environment, the movement of robot in unity is controlled by RAi. Thi
 - Now, attach "Flatten" script to the same root URDF Game Object.
 - Attach the "MoveObjects.cs" script to the Main Camera Game Object. This will implement the Http listener for moving the objects according to received frame data from RAI. Make sure the IP address for communication to machine running RAi is set correctly in this script. Also make sure that all network firewalls are "turned off" in Windows.
 - Apparently, unity requires libdl.so which is not present in mentioned Ubuntu version. So, find out the location of libdl.so.2 in your Ubuntu which is typically found in /usr/lib/x86_64-linux-gnu and then create a symlink from libdl.so to libdl.so.2 in the same directory. An example to do that is here:
--   ```shell
+  ```shell
     sudo ln -sf /usr/lib/x86_64-linux-gnu/libdl.so.2 /usr/lib/x86_64-linux-gnu/libdl.so
 - [Pick_Place jupyter notebook](https://github.com/HuzaifaSalahuddin/RAI-Unity-Bridge/blob/main/Example%20RAi%20Scripts/Pick_place.ipynb) implements communication module on RAI's side. Use this notebook to initiate a simulation that drives the robot in Unity controlled through RAI.
 
