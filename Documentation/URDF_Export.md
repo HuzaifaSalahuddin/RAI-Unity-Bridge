@@ -60,6 +60,6 @@
 
 - Copy both the URDF and created file to RAI-ROBOTMODELS path or your Python Notebook directory and you should now be able to import these objects as RAI objects.
 
-
-So now, you are done with the creation of .g and .urdf files for your scene. Import them inside RAi using the Pick_Place notebook and verify if everything works as intended. Then, you can go back to Unity and delete the extra copied objects other than robot links in your URDF gameobject. Also, you may copy the all the children gameobjects of "Objects" out of this gameobject. At this point, it is safe to delete "Objects". So, now you should have a robot which is a URDF gameobject and other objects are simple gameobjects without any URDF compoenents attached to them. Now, you may proceed to RAI_Unity_Sim if you want a running simulation connecting both RAI and Unity.
+## Finalize things!
+So now, you are done with the creation of .g and .urdf files for your scene. Import them inside RAi using the [Pick_Place](../Example_RAi_Scripts/Pick_Place.ipynb) notebook and verify if everything works as intended. Then, you can go back to Unity and delete the extra copied objects other than robot links in your URDF gameobject. Also, you may copy the all the children gameobjects of "Objects" out of this gameobject. At this point, it is safe to delete "Objects". So, now you should have a robot which is a URDF gameobject and other objects are simple gameobjects without any URDF compoenents attached to them. Now, you may proceed to [RAI_Unity_Sim](RAI_Unity_Sim.md) if you want a running simulation connecting both RAI and Unity.
 
