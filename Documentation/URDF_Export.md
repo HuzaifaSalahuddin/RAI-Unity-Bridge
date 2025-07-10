@@ -7,7 +7,7 @@
 
 *"DO NOT ENTER UNITY PLAY MODE" if you are in a process of creating a URDF scene. It damages the export process. It is highly suggested to first create and export the URDF scene. You may run the simulation after you are satisfied with the scene creation and have it exported to URDF.*
 
-- To reduce complexity and help in debugging, we shall be creating the URDF for the "scene only", without a robot (You may import a robot separately again through its URDF). So, delete all the children of world. Create the Scene howsoever you like. Make sure all the objects are in the correct locations. Keep moving them until you are satisfied. At this point, you need to make sure that these objects DO NOT HAVE any more children (If they have, then take them out so that their transforms are preserved)
+- To reduce complexity and help in debugging, we shall be creating the URDF for the "scene only", without a robot (You may import a robot separately again through its URDF). So, delete all the children of world. Create the Scene howsoever you like. Make sure all the objects are in the correct locations. Keep moving them until you are satisfied. At this point, you need to make sure that these objects DO NOT HAVE any more children (If they have, then take them out so that their transforms are preserved). Also, there should not be any spaces within the names of gameobjects. If a gameobject is named as "X Y", rename it as "X_Y".
 
 - Now copy all the objects (avoid copying light sources) and make them the children of an empty gameobject, put its name as "Objects". The transform (pos + rot) of this "Objects" should be completely ZERO. 
 
@@ -22,6 +22,9 @@
 - Now, you are done and can export the object in URDF format by clicking on "Export robot to URDF" under "URDF Robot" script attached to root of your URDF scene object.
 
 - Now, export the Robot to URDF (In case of Tiago/Mobile Robots, go and remove the limit line for planar joints in the exported URDF -> Known to Cause Issues)
+**IMPORTANT!**
+
+*"After the first export, if you feel like exporting once more to pass-on some adjustments/updates that you made in your URDF object, you cannot do that with the same URDF object because first export fully messes up the overall configuration of URDF object. So, you need to start from the beginning all over again. Therefore, make sure to export the URDF scene only once you are fully satisfied with all the adjustments.*
 
 ## Apply Correction to Transform Data
 
